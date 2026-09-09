@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Áurea Cockpit — Sign in</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%23c9a35a%22>A</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-body">
+  <div class="auth-card">
+    <span class="cockpit-logo" style="color:var(--dark);">ÁUREA</span>
+    <p class="cockpit-tag" style="color:var(--gold);">Investor Cockpit &middot; prototype access</p>
+
+    <form id="auth-form">
+      <label class="auth-label" for="auth-password">Password</label>
+      <input type="password" id="auth-password" name="password" autocomplete="current-password" autofocus>
+      <button type="submit" class="btn btn-primary btn-full" style="margin-top:14px;">Enter</button>
+      <p id="auth-error" class="auth-error"></p>
+    </form>
+
+    <p class="auth-note">This is a work-in-progress prototype, not a public product. Access is limited to people Áurea has shared the password with — ask the founder if you need it.</p>
+    <a href="../index.html" class="back-to-site" style="color:var(--ink-soft);">&larr; Back to site</a>
+  </div>
+
+  <script src="auth.js"></script>
+  <script>
+    document.getElementById("auth-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var input = document.getElementById("auth-password");
+      var errorEl = document.getElementById("auth-error");
+      sha256Hex(input.value).then(function (hash) {
+        if (hash === AUTH_PASSWORD_HASH) {
+          grantAuth();
+          window.location.href = "Delta%201.0.html";
+        } else {
+          errorEl.textContent = "Incorrect password. Try again.";
+          input.value = "";
+          input.focus();
+        }
+      });
+    });
+
+    // Already signed in this session — skip straight to the app.
+    if (isAuthed()) {
+      window.location.replace("Delta%201.0.html");
+    }
+  </script>
+</body>
+</html>

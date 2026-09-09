@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Áurea Investor Cockpit — Prototype</title>
+<meta name="description" content="Clickable prototype of the Áurea buyer cockpit: search, shortlist, AI valuation, mortgage calculator, alerts, transaction checklist and real auction listings.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%23c9a35a%22>A</text></svg>">
+<link rel="stylesheet" href="styles.css">
+<script src="auth.js"></script>
+<script>requireAuth();</script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <div class="prototype-banner">Prototype &middot; property listings below are fabricated demo inventory, not live listings. Neighborhood price benchmarks and the address lookup are real public data (sources on the Valuation and Property pages).</div>
+    <div id="view"></div>
+  </main>
+</div>
+
+<script src="data.js"></script>
+<script src="store.js"></script>
+<script src="views.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

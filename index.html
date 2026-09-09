@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Áurea — AI-Native Transaction Infrastructure for Residential Real Estate</title>
+<meta name="description" content="Áurea digitises and automates the complete residential property transaction lifecycle — starting in Madrid, expanding across Europe.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%23c9a35a%22>A</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="noise-overlay"></div>
+
+<header class="site-header" id="header">
+  <div class="container header-inner">
+    <a href="#top" class="logo">ÁUREA</a>
+    <nav class="main-nav" id="main-nav">
+      <a href="#problem">Problem</a>
+      <a href="#solution">Solution</a>
+      <a href="#product">Product</a>
+      <a href="#market">Market</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="cockpit/index.html">Demo</a>
+      <a href="#contact" class="nav-cta">Request Access</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMax slice" class="skyline">
+        <g fill="none" stroke="currentColor" stroke-width="1">
+          <rect x="60" y="420" width="90" height="380"/>
+          <rect x="170" y="340" width="70" height="460"/>
+          <rect x="260" y="480" width="110" height="320"/>
+          <rect x="1000" y="380" width="80" height="420"/>
+          <rect x="1090" y="460" width="90" height="340"/>
+          <rect x="900" y="500" width="70" height="300"/>
+          <line x1="0" y1="800" x2="1200" y2="800"/>
+        </g>
+      </svg>
+      <div class="grid-lines"></div>
+    </div>
+    <div class="container hero-inner reveal">
+      <p class="eyebrow">Founder draft &middot; Madrid &rarr; Spain &rarr; Europe</p>
+      <h1>The infrastructure powering the future of<br><span class="accent">residential real estate.</span></h1>
+      <p class="hero-sub">Áurea digitises and automates the complete residential property transaction
+        lifecycle — search, valuation, financing, legal and post-sale — inside one coordinated workflow.
+        We begin in Madrid before expanding across Europe.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Request Early Access</a>
+        <a href="#solution" class="btn btn-ghost">See how it works ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="stats-bar reveal">
+    <div class="container stats-grid">
+      <div class="stat">
+        <span class="stat-num">714k</span>
+        <span class="stat-label">registered housing sales in Spain, 2025</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">+11.5%</span>
+        <span class="stat-label">YoY growth in housing sales, 2025</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">+12.2%</span>
+        <span class="stat-label">YoY Spanish house price index, Q2 2026</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">~100k</span>
+        <span class="stat-label">foreign-buyer transactions, trailing 4Q</span>
+      </div>
+    </div>
+    <p class="container stats-source">Sources: INE STPR Dec. 2025 &amp; 2025; INE HPI Q2 2026; CaixaBank Research</p>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="section" id="problem">
+    <div class="container">
+      <p class="section-eyebrow reveal">The Problem</p>
+      <h2 class="section-title reveal">The real pain isn't discovery — it's transaction orchestration.</h2>
+      <p class="section-lead reveal">Buying a home in Spain is digital at the top of the funnel and fragmented
+        everywhere else. Every step re-starts the same conversation with a new party.</p>
+
+      <div class="journey reveal" aria-label="Fragmented buyer journey">
+        <span>Portal</span><i>→</i><span>Agent</span><i>→</i><span>Bank</span><i>→</i>
+        <span>Lawyer</span><i>→</i><span>Notary</span><i>→</i><span>Insurance</span><i>→</i><span>Post-sale</span>
+      </div>
+
+      <div class="card-grid reveal">
+        <div class="pain-card">
+          <h3>Duplicated data</h3>
+          <p>Clients re-enter the same information across agents, banks and lawyers.</p>
+        </div>
+        <div class="pain-card">
+          <h3>Slow response loops</h3>
+          <p>High-value transactions depend on fragmented email, calls and WhatsApp threads.</p>
+        </div>
+        <div class="pain-card">
+          <h3>Low process visibility</h3>
+          <p>Buyer and seller rarely have a real-time transaction cockpit.</p>
+        </div>
+        <div class="pain-card">
+          <h3>Manual coordination</h3>
+          <p>Agents spend time qualifying, chasing and scheduling instead of closing.</p>
+        </div>
+      </div>
+
+      <p class="callout reveal">Implication: the first company to own the workflow can capture economics
+        beyond commission — mortgage, legal, insurance, SaaS and post-sale management.</p>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="section section-dark" id="solution">
+    <div class="container">
+      <p class="section-eyebrow reveal">The Solution</p>
+      <h2 class="section-title reveal">Áurea coordinates the transaction, end-to-end.</h2>
+      <p class="section-lead reveal">A workflow platform — a Transaction OS — that turns a fragmented process
+        into a single managed transaction.</p>
+
+      <div class="hub-diagram reveal">
+        <div class="hub-center">Áurea<br><span>Transaction OS</span></div>
+        <div class="hub-node n1">Buyer</div>
+        <div class="hub-node n2">Seller</div>
+        <div class="hub-node n3">Agent / Broker</div>
+        <div class="hub-node n4">Bank / Mortgage</div>
+        <div class="hub-node n5">Lawyer / Notary</div>
+        <div class="hub-node n6">Insurance / PM</div>
+      </div>
+
+      <p class="callout callout-light reveal">Operating principle: automate repeatable coordination — keep
+        humans accountable for trust, negotiation and regulated decisions.</p>
+    </div>
+  </section>
+
+  <!-- PRODUCT -->
+  <section class="section" id="product">
+    <div class="container">
+      <p class="section-eyebrow reveal">Product</p>
+      <h2 class="section-title reveal">A transaction cockpit first — an operating system over time.</h2>
+      <p class="section-lead reveal">The MVP solves one painful workflow, then expands across the transaction stack.</p>
+
+      <div class="layer-list reveal">
+        <div class="layer-row">
+          <span class="layer-num">01</span>
+          <div>
+            <h3>Investor / buyer cockpit</h3>
+            <p>Search, shortlist, AI valuation, mortgage calculator, alerts, document checklist.</p>
+          </div>
+        </div>
+        <div class="layer-row">
+          <span class="layer-num">02</span>
+          <div>
+            <h3>Transaction orchestration</h3>
+            <p>CRM, client qualification, scheduling, workflow status, partner handoffs.</p>
+          </div>
+        </div>
+        <div class="layer-row">
+          <span class="layer-num">03</span>
+          <div>
+            <h3>Partner integrations</h3>
+            <p>Mortgage matching, legal partners, notary coordination, insurance, property management.</p>
+          </div>
+        </div>
+        <div class="layer-row">
+          <span class="layer-num">04</span>
+          <div>
+            <h3>Data &amp; AI infrastructure</h3>
+            <p>RAG, transaction data model, lead scoring, valuation support, workflow agents.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="callout reveal">AI is the cost advantage — the moat is workflow data and distribution.
+        Human-in-the-loop for legal, financial and negotiation-critical decisions, always.</p>
+
+      <div class="reveal" style="margin-top:40px;">
+        <a href="cockpit/index.html" class="btn btn-primary">Try the interactive cockpit demo →</a>
+        <p style="margin-top:12px; font-size:13px; color:var(--ink-soft);">Clickable prototype with mock inventory — search, shortlist, AI valuation, mortgage calculator, alerts, transaction checklist and real auction listings.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARKET -->
+  <section class="section section-dark" id="market">
+    <div class="container">
+      <p class="section-eyebrow reveal">Market Opportunity</p>
+      <h2 class="section-title reveal">Brokerage is the entry wedge; the full opportunity is the transaction stack.</h2>
+
+      <div class="market-grid reveal">
+        <div class="market-calc">
+          <div class="calc-row"><span>714k</span><small>2025 housing sales</small></div>
+          <div class="calc-op">×</div>
+          <div class="calc-row"><span>€250k</span><small>assumed average ticket</small></div>
+          <div class="calc-op">×</div>
+          <div class="calc-row"><span>3.0%</span><small>assumed net commission</small></div>
+          <div class="calc-op">≈</div>
+          <div class="calc-result"><span>€5.4B</span><small>annual brokerage revenue pool</small></div>
+        </div>
+
+        <div class="expansion-path">
+          <h3>Expansion sequence</h3>
+          <ol>
+            <li>Madrid</li>
+            <li>Spain</li>
+            <li>Portugal</li>
+            <li>France</li>
+            <li>Germany</li>
+            <li>Benelux</li>
+          </ol>
+        </div>
+      </div>
+
+      <p class="callout callout-light reveal">Adjacent revenue streams — mortgage referrals, legal services,
+        insurance, property management, and SaaS for agencies — extend the wedge into a full transaction platform.</p>
+      <p class="stats-source reveal">Internal planning assumptions, to be validated in pilots. Sources: INE 2025 housing sales.</p>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="section" id="roadmap">
+    <div class="container">
+      <p class="section-eyebrow reveal">Roadmap</p>
+      <h2 class="section-title reveal">An 18-month proof plan.</h2>
+      <p class="section-lead reveal">The objective is to generate fundable evidence — not to build a full
+        European platform on day one.</p>
+
+      <div class="timeline reveal">
+        <div class="tl-item">
+          <div class="tl-marker">Q1</div>
+          <div class="tl-content"><h3>Validate</h3><p>50 interviews, landing page, founder-advisor bench.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-marker">Q2</div>
+          <div class="tl-content"><h3>Prototype</h3><p>Data pipeline, first partner LOIs.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-marker">Q3</div>
+          <div class="tl-content"><h3>Madrid MVP</h3><p>Investor cockpit, agency pilots.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-marker">Q4</div>
+          <div class="tl-content"><h3>First transactions</h3><p>Mortgage / legal partners, CAC learning.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-marker">Q5</div>
+          <div class="tl-content"><h3>Playbook</h3><p>Repeatable playbook, B2B workflow tools, SaaS test.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-marker">Q6</div>
+          <div class="tl-content"><h3>Seed readiness</h3><p>Spain expansion thesis, Portugal diligence.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION / CTA -->
+  <section class="vision reveal">
+    <div class="container vision-inner">
+      <h2>Áurea is building the digital infrastructure for<br>residential property transactions across Europe.</h2>
+      <div id="contact" class="contact-card">
+        <h3>Request early access</h3>
+        <p>Founder, broker, lender or early user — tell us where you fit and we'll be in touch.</p>
+        <form id="access-form" class="access-form">
+          <input type="email" id="email-input" name="email" placeholder="you@email.com" required autocomplete="email">
+          <select id="role-input" name="role">
+            <option value="Prospective buyer/investor">I'm a buyer / investor</option>
+            <option value="Agency / broker">I'm an agency / broker</option>
+            <option value="Mortgage / legal / insurance partner">I'm a potential partner</option>
+            <option value="Investor / advisor">I'm an investor / advisor</option>
+            <option value="Other">Other</option>
+          </select>
+          <button type="submit" class="btn btn-primary">Notify me</button>
+        </form>
+        <p class="form-consent">By submitting, you agree to be contacted about Áurea. See our <a href="privacy.html">Privacy Policy</a> and <a href="legal-notice.html">Legal Notice</a>.</p>
+        <p id="form-note" class="form-note"></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <span class="logo small">ÁUREA</span>
+      <p class="footer-tag">AI-native transaction infrastructure for residential real estate.</p>
+    </div>
+    <div class="footer-meta">
+      <p>Contact: <a href="mailto:santiago.varela1552006@gmail.com">santiago.varela1552006@gmail.com</a></p>
+      <p class="footer-disclaimer">Founder draft for early feedback. Figures marked as internal are planning
+        assumptions, not audited data. Public figures sourced from INE and CaixaBank Research.</p>
+      <p class="footer-copy">© <span id="year"></span> Project Áurea. All rights reserved. &middot; <a href="legal-notice.html">Legal Notice</a> &middot; <a href="privacy.html">Privacy Policy</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -390,6 +390,31 @@ body {
 .layer-row h3 { font-size: 18px; margin-bottom: 6px; }
 .layer-row p { font-size: 14.5px; color: var(--ink-soft); max-width: 560px; }
 
+/* ---------- Founder ---------- */
+.founder-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.founder-bio p {
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+}
+.founder-bio p:last-child { margin-bottom: 0; }
+.founder-credentials {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border-left: 2px solid var(--line);
+  padding-left: 24px;
+}
+.credential-item { display: flex; flex-direction: column; gap: 3px; }
+.credential-item strong { font-size: 14.5px; color: var(--ink); }
+.credential-item span { font-size: 13px; color: var(--ink-soft); }
+
 /* ---------- Market ---------- */
 .market-grid {
   display: grid;
@@ -578,6 +603,8 @@ body {
   .card-grid { grid-template-columns: 1fr 1fr; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .market-grid { grid-template-columns: 1fr; }
+  .founder-grid { grid-template-columns: 1fr; }
+  .founder-credentials { border-left: none; border-top: 2px solid var(--line); padding-left: 0; padding-top: 20px; }
   .timeline { grid-template-columns: repeat(3, 1fr); }
   .footer-meta { text-align: left; }
 }

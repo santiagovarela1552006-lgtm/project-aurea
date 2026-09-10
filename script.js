@@ -26,9 +26,10 @@ if ('IntersectionObserver' in window) {
   revealEls.forEach(el => el.classList.add('in-view'));
 }
 
-// Access form -> opens a prefilled email to the founder
+// Access form -> delivered straight to the founder's inbox via FormSubmit
 const accessForm = document.getElementById('access-form');
 const formNote = document.getElementById('form-note');
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/santiago.varela1552006@gmail.com';
 
 accessForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -37,14 +38,32 @@ accessForm.addEventListener('submit', (e) => {
 
   if (!email) return;
 
-  const subject = encodeURIComponent('Áurea — Early access request');
-  const body = encodeURIComponent(
-    `Contact email: ${email}\nRole: ${role}\n\n(Sent from the Áurea landing page)`
-  );
-  window.location.href = `mailto:santiago.varela1552006@gmail.com?subject=${subject}&body=${body}`;
+  const submitBtn = accessForm.querySelector('button[type="submit"]');
+  submitBtn.disabled = true;
+  formNote.textContent = 'Sending...';
 
-  formNote.textContent = "Thanks — your email client should open with a prefilled message. We'll be in touch.";
-  accessForm.reset();
+  fetch(FORM_ENDPOINT, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify({
+      email: email,
+      role: role,
+      _subject: 'Aurea: early access request',
+      _template: 'table',
+      _honey: ''
+    })
+  })
+    .then((res) => {
+      if (!res.ok) throw new Error('Request failed');
+      formNote.textContent = "Thanks, that's sent straight to the founder. We'll be in touch.";
+      accessForm.reset();
+    })
+    .catch(() => {
+      formNote.textContent = `Something went wrong. Please email us directly at santiago.varela1552006@gmail.com`;
+    })
+    .finally(() => {
+      submitBtn.disabled = false;
+    });
 });
 
 // Footer year
